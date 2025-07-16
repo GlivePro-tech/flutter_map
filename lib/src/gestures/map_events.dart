@@ -101,17 +101,13 @@ class MapEventMove extends MapEventWithMove {
 /// Event which is fired when dragging is started
 class MapEventMoveStart extends MapEvent {
   MapEventMoveStart(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when dragging is finished
 class MapEventMoveEnd extends MapEvent {
   MapEventMoveEnd(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when animation started by fling gesture is in progress
@@ -129,25 +125,19 @@ class MapEventFlingAnimation extends MapEventWithMove {
 /// to start fling animation
 class MapEventFlingAnimationNotStarted extends MapEvent {
   MapEventFlingAnimationNotStarted(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when fling gesture is detected
 class MapEventFlingAnimationStart extends MapEvent {
   MapEventFlingAnimationStart(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when animation started by fling gesture finished
 class MapEventFlingAnimationEnd extends MapEvent {
   MapEventFlingAnimationEnd(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when map is double tapped
@@ -175,17 +165,13 @@ class MapEventScrollWheelZoom extends MapEventWithMove {
 /// Event which is fired when animation for double tap gesture is started
 class MapEventDoubleTapZoomStart extends MapEvent {
   MapEventDoubleTapZoomStart(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when animation for double tap gesture ends
 class MapEventDoubleTapZoomEnd extends MapEvent {
   MapEventDoubleTapZoomEnd(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 /// Event which is fired when map is being rotated
@@ -212,14 +198,10 @@ class MapEventRotate extends MapEvent {
 /// Event which is fired when rotate gesture was started
 class MapEventRotateStart extends MapEvent {
   MapEventRotateStart(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }
 
 class MapEventRotateEnd extends MapEvent {
   MapEventRotateEnd(
-      {required super.source,
-      required super.center,
-      required super.zoom});
+      {required super.source, required super.center, required super.zoom});
 }

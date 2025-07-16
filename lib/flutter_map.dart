@@ -348,8 +348,9 @@ class FitBoundsOptions {
   const FitBoundsOptions({
     this.padding = EdgeInsets.zero,
     this.maxZoom = 17.0,
-    @Deprecated('This property is unused and will be removed in the next major release.')
-        this.zoom,
+    @Deprecated(
+        'This property is unused and will be removed in the next major release.')
+    this.zoom,
     this.inside = false,
     this.forceIntegerZoomLevel = false,
   });

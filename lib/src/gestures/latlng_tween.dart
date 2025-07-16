@@ -2,8 +2,7 @@ import 'package:flutter/animation.dart';
 import 'package:latlong2/latlong.dart';
 
 class LatLngTween extends Tween<LatLng> {
-  LatLngTween({required LatLng begin, required LatLng end})
-      : super(begin: begin, end: end);
+  LatLngTween({required super.begin, required super.end});
 
   @override
   LatLng lerp(double t) => LatLng(
