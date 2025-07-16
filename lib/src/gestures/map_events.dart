@@ -51,10 +51,10 @@ abstract class MapEventWithMove extends MapEvent {
   MapEventWithMove({
     required this.targetCenter,
     required this.targetZoom,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(source: source, center: center, zoom: zoom);
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when map is tapped
@@ -64,10 +64,10 @@ class MapEventTap extends MapEvent {
 
   MapEventTap({
     required this.tapPosition,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(source: source, center: center, zoom: zoom);
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when map is long-pressed
@@ -77,10 +77,10 @@ class MapEventLongPress extends MapEvent {
 
   MapEventLongPress({
     required this.tapPosition,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(source: source, center: center, zoom: zoom);
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when map is being dragged
@@ -90,133 +90,102 @@ class MapEventMove extends MapEventWithMove {
 
   MapEventMove({
     this.id,
-    required LatLng targetCenter,
-    required double targetZoom,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(
-          targetCenter: targetCenter,
-          targetZoom: targetZoom,
-          source: source,
-          center: center,
-          zoom: zoom,
-        );
+    required super.targetCenter,
+    required super.targetZoom,
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when dragging is started
 class MapEventMoveStart extends MapEvent {
   MapEventMoveStart(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when dragging is finished
 class MapEventMoveEnd extends MapEvent {
   MapEventMoveEnd(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when animation started by fling gesture is in progress
 class MapEventFlingAnimation extends MapEventWithMove {
   MapEventFlingAnimation({
-    required LatLng targetCenter,
-    required double targetZoom,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(
-          targetCenter: targetCenter,
-          targetZoom: targetZoom,
-          source: source,
-          center: center,
-          zoom: zoom,
-        );
+    required super.targetCenter,
+    required super.targetZoom,
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Emits when InteractiveFlags contains fling and there wasn't enough velocity
 /// to start fling animation
 class MapEventFlingAnimationNotStarted extends MapEvent {
   MapEventFlingAnimationNotStarted(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when fling gesture is detected
 class MapEventFlingAnimationStart extends MapEvent {
   MapEventFlingAnimationStart(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when animation started by fling gesture finished
 class MapEventFlingAnimationEnd extends MapEvent {
   MapEventFlingAnimationEnd(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when map is double tapped
 class MapEventDoubleTapZoom extends MapEventWithMove {
   MapEventDoubleTapZoom({
-    required LatLng targetCenter,
-    required double targetZoom,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(
-          targetCenter: targetCenter,
-          targetZoom: targetZoom,
-          source: source,
-          center: center,
-          zoom: zoom,
-        );
+    required super.targetCenter,
+    required super.targetZoom,
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when scroll wheel is used to zoom
 class MapEventScrollWheelZoom extends MapEventWithMove {
   MapEventScrollWheelZoom({
-    required LatLng targetCenter,
-    required double targetZoom,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(
-          targetCenter: targetCenter,
-          targetZoom: targetZoom,
-          source: source,
-          center: center,
-          zoom: zoom,
-        );
+    required super.targetCenter,
+    required super.targetZoom,
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when animation for double tap gesture is started
 class MapEventDoubleTapZoomStart extends MapEvent {
   MapEventDoubleTapZoomStart(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when animation for double tap gesture ends
 class MapEventDoubleTapZoomEnd extends MapEvent {
   MapEventDoubleTapZoomEnd(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 /// Event which is fired when map is being rotated
@@ -234,25 +203,23 @@ class MapEventRotate extends MapEvent {
     required this.id,
     required this.currentRotation,
     required this.targetRotation,
-    required MapEventSource source,
-    required LatLng center,
-    required double zoom,
-  }) : super(source: source, center: center, zoom: zoom);
+    required super.source,
+    required super.center,
+    required super.zoom,
+  });
 }
 
 /// Event which is fired when rotate gesture was started
 class MapEventRotateStart extends MapEvent {
   MapEventRotateStart(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }
 
 class MapEventRotateEnd extends MapEvent {
   MapEventRotateEnd(
-      {required MapEventSource source,
-      required LatLng center,
-      required double zoom})
-      : super(source: source, center: center, zoom: zoom);
+      {required super.source,
+      required super.center,
+      required super.zoom});
 }

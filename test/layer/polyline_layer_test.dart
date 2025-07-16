@@ -16,9 +16,9 @@ void main() {
       Polyline(
         key: key,
         points: [
-          LatLng(50.5, -0.09),
-          LatLng(51.3498, -6.2603),
-          LatLng(53.8566, 2.3522),
+          const LatLng(50.5, -0.09),
+          const LatLng(51.3498, -6.2603),
+          const LatLng(53.8566, 2.3522),
         ],
         strokeWidth: 4,
         color: Colors.amber,

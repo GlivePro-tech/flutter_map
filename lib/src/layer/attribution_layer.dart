@@ -18,10 +18,10 @@ class AttributionWidget extends StatelessWidget {
   ///
   /// Alternatively, use the constructor [defaultWidget] to get a more classic styled attibution box.
   const AttributionWidget({
-    Key? key,
+    super.key,
     required this.attributionBuilder,
     this.alignment = Alignment.bottomRight,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) =>

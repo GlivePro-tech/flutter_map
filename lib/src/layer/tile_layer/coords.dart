@@ -5,7 +5,7 @@ import 'package:tuple/tuple.dart';
 class Coords<T extends num> extends CustomPoint<T> {
   late T z;
 
-  Coords(T x, T y) : super(x, y);
+  Coords(T super.x, T super.y);
 
   Coords<double> wrap(
       Tuple2<double, double>? wrapX, Tuple2<double, double>? wrapY) {

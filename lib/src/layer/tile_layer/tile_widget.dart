@@ -15,8 +15,8 @@ class AnimatedTile extends StatelessWidget {
     required this.tileTransformation,
     required this.errorImage,
     required this.tileBuilder,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

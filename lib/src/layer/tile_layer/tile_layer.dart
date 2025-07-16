@@ -446,7 +446,7 @@ class _TileLayerState extends State<TileLayer> with TickerProviderStateMixin {
     final Map<double, TileTransformation> zoomToTransformation = {};
 
     final tileWidgets = <Widget>[
-      for (var tile in tilesToRender)
+      for (final tile in tilesToRender)
         AnimatedTile(
           tile: tile,
           size: _tileSize,
